@@ -1,8 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-
-include 'C:\xampp\htdocs\PHP Programming\PHP_Unit_Test\src\LinearSearch.php';
+use App\LinearSearch;
+//include 'C:\xampp\htdocs\PHP Programming\PHP_Unit_Test\src\LinearSearch.php';
 
 /**
  * Author -> Arafath Baig
@@ -17,12 +17,12 @@ class LinearSearchTest extends TestCase
     {
         $linearSearch = new LinearSearch();
         $result = $linearSearch->search($this->linearSearchArray, 10);
-        $this->assertEquals($result, 3);
+        $this->assertEquals(3, $result);
     }
     public function testGivenDataNotFoundShouldReturnFalse()
     {
         $linearSearch = new LinearSearch();
         $result = $linearSearch->search($this->linearSearchArray, 50);
-        $this->assertEquals($result, -1);
+        $this->assertEquals(-1, $result);
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+namespace App;
+
 /**
  * Author -> Arafath Baig
  * PHP Version -> 8.0.9

@@ -1,8 +1,9 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
+use App\BinarySearch;
+//include 'C:\xampp\htdocs\PHP Programming\PHP_Unit_Test\src\BinarySearch.php';
 
-include 'C:\xampp\htdocs\PHP Programming\PHP_Unit_Test\src\BinarySearch.php';
 /**
  * Author -> Arafath Baig
  * PHP Version -> 8.0.9
@@ -18,7 +19,7 @@ class BinarySearchTest extends TestCase
         $lower = 0;
         $higher = count($this->binarySearchArray) - 1;
         $result = $binarySearch->search($this->binarySearchArray, $lower, $higher, 10);
-        $this->assertEquals($result, 4, $message = "Test True");
+        $this->assertEquals(4, $result);
     }
     public function testGivenDataNotFoundShouldReturnFalse()
     {
@@ -26,6 +27,6 @@ class BinarySearchTest extends TestCase
         $lower = 0;
         $higher = count($this->binarySearchArray) - 1;
         $result = $binarySearch->search($this->binarySearchArray, $lower, $higher, 50);
-        $this->assertEquals($result, -1, $message = "Test False");
+        $this->assertEquals(-1, $result);
     }
 }
